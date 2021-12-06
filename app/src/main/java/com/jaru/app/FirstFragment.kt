@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.jaru.app.databinding.FragmentFirstBinding
+import com.jaru.app.viewModel.LoginVieModel
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -14,6 +16,8 @@ import com.jaru.app.databinding.FragmentFirstBinding
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
+
+    private val viewModel : LoginVieModel  by activityViewModels()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
